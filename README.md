@@ -1,8 +1,12 @@
 # 目前可支持的训练选项
 1、大部分主流的主干(MobileNet1-4、ConvNext、VIT应该有几百种~)
+
 2、部分分类损失函数Focal_loss等 (ultralytics\utils\loss.py)
+
 3、部分定位损失，GIOU、EIOU等 (ultralytics\utils\loss.py)
+
 4、YOLOv10的检测头NMS-FREE(后处理时间基本为0)
+
 5、大部分注意力机制，怎么修改后续会录视频，实在是不好写文档说明
 # 环境配置
 本项目正常的测试环境 : CUDA11.6 Python3.8 torch1.13.1
@@ -77,10 +81,12 @@ head:
 **配置文件backbone的第一层参数为Ture，则加载预训练权重，False则随机初始化，但是目前由于种种原因，预训练权重没办法通过timm直接下载，所以建议False**
 
 # 修改/添加损失函数
-ultralytics\utils\loss.py中可以自己定义，以Detect为例，找到class v8DetectionLoss，修改self.bec即可
+ultralytics\utils\loss.py中可以自己定义，以Detect为例，找到class v8DetectionLoss，修改self.bce即可
 
 # NMSFREE
 训练的时候直接调用对应的配置文件即可，目前只支持检测网络
 
 # 自己DIY配置文件
 由于模型解析函数已经修改完成，所以可以自由选择组合方式，例如nmsfree+mobilenetv3，OBB，Segment，Pose均可修改，注意层数的匹配即可。
+
+# Attention的添加和以及配置文件的修改

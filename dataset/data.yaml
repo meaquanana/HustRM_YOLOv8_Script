@@ -1,0 +1,10 @@
+# dataset path
+train: /root/lzz/ultralytics-main/dataset/images/train
+val: /root/lzz/ultralytics-main/dataset/images/val
+test: /root/lzz/ultralytics-main/dataset/images/test
+
+# number of classes
+nc: 1
+
+# class names
+names: ['NULL']
