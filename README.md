@@ -15,7 +15,7 @@
     
     pip install  -r requirements.txt
 
-    pip install timm0.9.8 thop efficientnet_pytorch0.7.1 einops grad-cam1.4.8 dill0.3.6 albumentations1.3.1 pytorch_wavelets1.3.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
+    pip install timm==0.9.8 thop efficientnet_pytorch==0.7.1 einops grad-cam==1.4.8 dill==0.3.6 albumentations==1.3.1 pytorch_wavelets==1.3.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
 
     # mmcv可选，建议安装，命令如下，安装失败建议换源
     pip install -U openmim
